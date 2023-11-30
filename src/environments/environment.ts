@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase : {
+    apiKey: "AIzaSyAhdVGACSY0u4Met564sx6DoRT67fh4D1Q",
+    authDomain: "userdetail-7932e.firebaseapp.com",
+    projectId: "userdetail-7932e",
+    storageBucket: "userdetail-7932e.appspot.com",
+    messagingSenderId: "303176840852",
+    appId: "1:303176840852:web:2c4a0a657f73c72cdf6681",
+    measurementId: "G-3PJYYK7QX6"
+  }
 };
 
 /*
@@ -14,3 +23,9 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration

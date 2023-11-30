@@ -1,0 +1,47 @@
+<h1 class="head1">User Entry Page</h1>
+
+<div class="card" style="width:25rem">
+    <div class="card-body">
+      <form [formGroup]="formTemplate" (submit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label> 
+            <input class="form-control" formControlName="name" placeholder="Name" minlength="2">
+            <div class="text-danger" *ngIf="isSubmitted && formControls['name'].errors?.['required']">This field is required.
+            </div>
+            <div *ngIf="formControls['name'].errors?.['minlength']">
+              Name must be at least 2 characters long.
+            </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="Email">
+          <div class="text-danger" *ngIf="isSubmitted && formControls['email'].errors?.['required']">This field is required.
+          </div>
+        </div>
+        <div class="form-group">
+            <label>Cell Number</label>
+            <input class="form-control" formControlName="cellno" placeholder="Cell Number" minlength="10" maxlength="10">
+            <div class="text-danger" *ngIf="isSubmitted && formControls['cellno'].errors?.['required']">This field is required.
+            </div>
+            <div class="text-danger" *ngIf="formControls['cellno'].errors?.['maxlength'] || formControls['cellno'].errors?.['minlength']">
+              Not a valid age
+            </div>
+          </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input class="form-control" formControlName="age" placeholder="Age"  maxlength="2">
+          <div class="text-danger" *ngIf="isSubmitted && formControls['age'].errors?.['required']">This field is required.
+          </div>
+          <div class="text-danger" *ngIf="formControls['age'].errors?.['maxlength'] || formControls['age'].errors?.['max'] || formControls['age'].errors?.['min']">
+            Not a valid age
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+          </div>
+        </div>
+        <div *ngIf="submittedSuccess">Successfully Submitted</div>
+      </form>
+    </div>
+  </div>

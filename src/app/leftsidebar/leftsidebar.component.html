@@ -1,0 +1,42 @@
+
+<div class="sidebar">
+    <img class="avatar " src="/assets/binary.webp" />
+    <p class="name">Data Store</p>
+    <p class="designation">User Entry Profile</p>
+    <br>
+   
+    <button mat-button class="menu-button">
+        <mat-icon>person</mat-icon>
+        <span><a class="alink"
+            [title]="'About'"
+            [routerLink]="['./about']">
+            About
+            </a></span>
+    </button><br> <br>
+    <button mat-button class="menu-button">
+        <mat-icon>add_box</mat-icon>
+        <span> <a class="alink"
+            [title]="'Add User'"
+            [routerLink]="['./adduser']">
+            Add User
+            </a></span>
+    </button><br><br>
+    <button mat-button class="menu-button">
+        <mat-icon>search</mat-icon>
+        <span> <a class="alink"
+            [title]="'Get User'"
+            [routerLink]="['./getuser']">
+            Get User
+            </a></span>
+    </button><br><br>
+    <!-- <button mat-button class="menu-button">
+        <mat-icon>add_shopping_cart</mat-icon>
+        <span><a class="alink"
+            [title]="'Products'"
+            [routerLink]="['./product-list']">
+            Product List
+            </a></span>
+    </button><br><br> -->
+    
+</div>
+  

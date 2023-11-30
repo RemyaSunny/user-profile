@@ -1,0 +1,19 @@
+table {
+    border: 1px solid;
+    
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td
+{
+    border: 1px solid black;
+    text-align: center;
+    height: 40px;
+    vertical-align: bottom;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.headings {
+    font-weight: bold;
+}

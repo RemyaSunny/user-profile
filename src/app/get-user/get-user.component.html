@@ -1,0 +1,27 @@
+<p>Search the User</p>
+<form>
+    <mat-form-field appearance="fill">
+        <mat-label>Choose one</mat-label>
+        <mat-select name="selectedName" [(ngModel)]="selectedName">
+          <mat-option value="all">ALL</mat-option>
+          <mat-option *ngFor="let user of users" [value]="user.name">{{user.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+    <button (click)="search()">Search</button><br><br>
+    <table>
+        
+        <tr class="headings"><td>Name</td>
+            <td>Email</td>
+            <td>Cell No.</td>
+            <td>Age</td>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.cellno}}</td>
+            <td>{{user.age}}</td>
+        </tr> 
+</table>
+
+</form>
